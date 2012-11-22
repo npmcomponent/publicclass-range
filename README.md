@@ -1,4 +1,4 @@
-# range
+# Range
 
   Parses a Range from a string (ex. "0...10")
 
@@ -10,9 +10,9 @@
 
   (generated using mocha)
 
-### integers
+### Integers
 
-0..1
+**0..1**
 
 ```js
 range('0..1').should.be.an.instanceof(Range)
@@ -27,7 +27,7 @@ range('0..1').values.should.not.include('0')
 range('0..1').values.should.not.include('1')
 ```
 
-10..0.
+**10..0**
 
 ```js
 range('10..0').should.be.an.instanceof(Range)
@@ -42,7 +42,7 @@ range('10..0').values.should.not.include('0')
 range('10..0').values.should.not.include('1')
 ```
 
-0...1.
+**0...1**
 
 ```js
 range('0...1').should.be.an.instanceof(Range)
@@ -57,7 +57,7 @@ range('0...1').values.should.not.include('0')
 range('0...1').values.should.not.include('1')
 ```
 
-0-1.
+**0-1**
 
 ```js
 range('0-1').should.be.an.instanceof(Range)
@@ -72,7 +72,7 @@ range('0-1').values.should.not.include('0')
 range('0-1').values.should.not.include('1')
 ```
 
-0..-1.
+**0..-1**
 
 ```js
 range('0..-1').should.be.an.instanceof(Range)
@@ -87,8 +87,9 @@ range('0..-1').values.should.not.include('0')
 range('0..-1').values.should.not.include('1')
 ```
 
-### floats
-0.1..1.0
+### Floats
+
+**0.1..1.0**
 
 ```js
 range('0.1..1.0').should.be.an.instanceof(Range)
@@ -107,7 +108,7 @@ range('0.1..1.0').values.should.not.include('0')
 range('0.1..1.0').values.should.not.include('1')
 ```
 
-0.001...1.0
+**0.001...1.0**
 
 ```js
 range('0.001...1.0').should.be.an.instanceof(Range)
@@ -126,7 +127,7 @@ range('0.001...1.0').values.should.not.include('0')
 range('0.001...1.0').values.should.not.include('1')
 ```
 
-0.1-15
+**0.1-15**
 
 ```js
 range('0.1-15').should.be.an.instanceof(Range)
@@ -146,9 +147,9 @@ range('0.1-15').values.should.not.include('0')
 range('0.1-15').values.should.not.include('1')
 ```
 
-## alphabetic
+## Alphabetic
 
-a..z
+**a..z**
 
 ```js
 range('a..z').should.be.an.instanceof(Range)
@@ -166,7 +167,7 @@ range('a..z').values.should.not.include('A')
 range('a..z').values.should.not.include('Z')
 ```
 
-a...z
+**a...z**
 
 ```js
 range('a...z').should.be.an.instanceof(Range)
@@ -184,7 +185,7 @@ range('a...z').values.should.not.include('A')
 range('a...z').values.should.not.include('Z')
 ```
 
-a-z
+**a-z**
 
 ```js
 range('a-z').should.be.an.instanceof(Range)
@@ -202,7 +203,7 @@ range('a-z').values.should.not.include('A')
 range('a-z').values.should.not.include('Z')
 ```
 
-z-a
+**z-a**
 
 ```js
 range('z-a').should.be.an.instanceof(Range)
@@ -220,7 +221,7 @@ range('z-a').values.should.not.include('A')
 range('z-a').values.should.not.include('Z')
 ```
 
-A-Z
+**A-Z**
 
 ```js
 range('A-Z').should.be.an.instanceof(Range)
