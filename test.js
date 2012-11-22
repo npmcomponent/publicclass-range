@@ -79,7 +79,7 @@ describe('range',function(){
       range('0..-1').values.should.not.include('1')
     })
 
-    it('0...-10',function(){
+    it.skip('0...-10',function(){
       range('0...-10').should.be.an.instanceof(Range)
       range('0...-10').should.have.property('inclusive',false)
       range('0...-10').should.have.property('exclusive',true)
@@ -112,7 +112,7 @@ describe('range',function(){
       range('0.1..1.0').values.should.not.include('1')
     })
 
-    it('-0.001...-1.0',function(){
+    it.skip('-0.001...-1.0',function(){
       range('-0.001...-1.0').should.be.an.instanceof(Range)
       range('-0.001...-1.0').should.have.property('inclusive',false)
       range('-0.001...-1.0').should.have.property('exclusive',true)
