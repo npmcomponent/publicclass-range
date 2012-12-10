@@ -2,14 +2,14 @@ var range = require('./index')
   , Range = range.Range;
 
 
-  /*
-  '0..1' -> [0,1] // inclusive
-  '0...1' -> [0]  // exclusive
-  '0-1000' -> [0,1,2,3,....,10000] // inclusive
-  '-1..-5' -> [-1,-2,-3,-4,-5]
-  '-5..-1' -> [] // range going the wrong way
-  'a-z' -> ['a','b','c'...,'z'] // alphabet too
-  */
+/*
+'0..1' -> [0,1] // inclusive
+'0...1' -> [0]  // exclusive
+'0-1000' -> [0,1,2,3,....,10000] // inclusive
+'-1..-5' -> [-1,-2,-3,-4,-5]
+'-5..-1' -> [] // range going the wrong way
+'a-z' -> ['a','b','c'...,'z'] // alphabet too
+*/
 
 describe('range',function(){
 
@@ -246,6 +246,41 @@ describe('range',function(){
       range('A-Z').values.should.not.include('1')
       range('A-Z').values.should.not.include('a')
       range('A-Z').values.should.not.include('z')
+    })
+
+  })
+
+  describe('toString',function(){
+    it('0..1',function(){
+      range('0..1').toString().should.equal('0..1')
+    })
+
+    it('10...1',function(){
+      range('10...1').toString().should.equal('10...1')
+    })
+
+    it('A-Z',function(){
+      range('A-Z').toString().should.equal('A..Z')
+    })
+
+    it('z-a',function(){
+      range('z-a').toString().should.equal('z..a')
+    })
+
+    it('0.1-15',function(){
+      range('0.1-15').toString().should.equal('0.1..15')
+    })
+
+    it('0..-1',function(){
+      range('0..-1').toString().should.equal('0..-1')
+    })
+
+    it('0.001...1.0',function(){
+      range('0.001...1.0').toString().should.equal('0.001...1.0')
+    })
+
+    it('-0.001...-1.0',function(){
+      range('-0.001...-1.0').toString().should.equal('-0.001...-1.0')
     })
   })
 
