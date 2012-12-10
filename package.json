@@ -1,6 +1,6 @@
 {
   "name": "range",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parses a Range from a string (ex. \"0...10\")",
   "main": "index.js",
   "devDependencies": {
