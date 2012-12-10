@@ -284,4 +284,11 @@ describe('range',function(){
     })
   })
 
+  describe('valueOf',function(){
+    it('should return a string',function(){
+      (''+range('0..1')).should.equal('0..1')
+      range('0..1').should.not.equal('0..1')
+    })
+  })
+
 })
