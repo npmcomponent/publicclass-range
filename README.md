@@ -1,6 +1,8 @@
 # Range
 
   Parses a Range from a string (ex. "0...10")
+  
+  [![Build Status](https://travis-ci.org/publicclass/range.png)](https://travis-ci.org/publicclass/range)
 
 ## Installation
 
