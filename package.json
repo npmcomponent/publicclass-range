@@ -1,25 +1,8 @@
 {
-  "name": "range",
-  "version": "0.2.0",
+  "name": "publicclass-range",
   "description": "Parses a Range from a string (ex. \"0...10\")",
-  "main": "index.js",
-  "devDependencies": {
-    "mocha": "~1.7.0",
-    "should": "~1.2.1"
-  },
-  "scripts": {
-    "test": "make test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/publicclass/range.git"
-  },
-  "keywords": [
-    "range",
-    "string",
-    "parser"
-  ],
-  "author": "Robert Sköld <robert@publicclass.se>",
-  "license": "MIT",
-  "readmeFilename": "README.md"
+  "version": "0.2.0",
+  "keywords": [],
+  "dependencies": {},
+  "license": "MIT"
 }
